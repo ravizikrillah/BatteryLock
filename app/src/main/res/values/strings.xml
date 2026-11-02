@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BatteryLock</string>
+    <string name="low_battery_title">🪫 BATERAI LEMAH</string>
+    <string name="under_target_title">⚠️ PENGISIAN BELUM 50%</string>
+    <string name="charging_handoff_title">⚡ SEDANG MENGISI DAYA</string>
+    <string name="charging_handoff_message">Perangkat sedang dicas.\nLepas casan untuk menggunakan perangkat.</string>
+    <string name="permission_request">Aplikasi membutuhkan izin "Muncul di atas aplikasi lain" untuk mengunci layar saat baterai di bawah 20%.</string>
+</resources>

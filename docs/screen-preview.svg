@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="760" height="420" viewBox="0 0 760 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="arcRed" x1="160" y1="80" x2="290" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF1744"/>
+      <stop offset="100%" stop-color="#FF9100"/>
+    </linearGradient>
+    <linearGradient id="arcEmerald" x1="470" y1="80" x2="600" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00C853"/>
+      <stop offset="100%" stop-color="#B2FF59"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="760" height="420" rx="24" fill="#161B22"/>
+
+  <!-- Left Screen: ≤ 20% Low Battery Lock -->
+  <rect x="36" y="34" width="316" height="352" rx="24" fill="#0F0F0F" stroke="#30363D" stroke-width="5"/>
+  <circle cx="194" cy="154" r="64" stroke="#2B2B2B" stroke-width="9"/>
+  <path d="M194 90 A64 64 0 0 1 258 154" stroke="url(#arcRed)" stroke-width="9" stroke-linecap="round"/>
+  <rect x="187" y="110" width="14" height="22" rx="3" stroke="#FF5252" stroke-width="2.5"/>
+  <rect x="191" y="115" width="6" height="8" fill="#FF5252"/>
+  <rect x="191" y="125" width="6" height="3" fill="#FF5252"/>
+  <text x="194" y="182" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">20%</text>
+  <rect x="58" y="246" width="272" height="106" rx="14" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="194" y="274" text-anchor="middle" fill="#FF6E40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">🪫 BATERAI LEMAH</text>
+  <text x="194" y="302" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Baterai tersisa 20%.</text>
+  <text x="194" y="324" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Pasang casan &amp; isi minimal sampai 50%.</text>
+
+  <!-- Seamless Handoff Arrow -->
+  <path d="M366 210 H394 M386 202 L396 210 L386 218" stroke="#8B949E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right Screen: Seamless Handoff to ChargeLock -->
+  <rect x="408" y="34" width="316" height="352" rx="24" fill="#0F0F0F" stroke="#30363D" stroke-width="5"/>
+  <circle cx="566" cy="154" r="64" stroke="#2B2B2B" stroke-width="9"/>
+  <path d="M566 90 A64 64 0 0 1 630 154" stroke="url(#arcEmerald)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M570 110 L558 126 H567 L562 140 L576 123 H567 L570 110 Z" fill="#FFEB3B"/>
+  <text x="566" y="182" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800">20%</text>
+  <rect x="430" y="246" width="272" height="106" rx="14" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="566" y="274" text-anchor="middle" fill="#B2FF59" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">⚡ SEDANG MENGISI DAYA</text>
+  <text x="566" y="302" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Perangkat sedang dicas.</text>
+  <text x="566" y="324" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Lepas casan untuk menggunakan perangkat.</text>
+</svg>
