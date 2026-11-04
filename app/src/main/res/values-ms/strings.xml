@@ -1,0 +1,19 @@
+<resources>
+    <string name="low_battery_title">🪫 BATERI LEMAH</string>
+    <string name="low_battery_message">Baki bateri %1$d%%.\nSambungkan pengecas &amp; cas sekurang-kurangnya hingga %2$d%%.</string>
+    <string name="under_target_title">⚠️ PENGECASAN BELUM %1$d%%</string>
+    <string name="under_target_message">Bateri baru %1$d%%.\nJangan tanggalkan dahulu, cas sekurang-kurangnya hingga %2$d%%.</string>
+    <string name="charging_handoff_title">⚡ SEDANG MENGECAS</string>
+    <string name="charging_handoff_message">Peranti sedang dicas.\nTanggalkan pengecas untuk menggunakan peranti.</string>
+    <string name="setup_title">Tetapan BatteryLock</string>
+    <string name="permission_request">Aplikasi memerlukan kebenaran "Papar di atas aplikasi lain" untuk mengunci skrin apabila bateri ≤ 20%.</string>
+    <string name="grant_overlay_button">Beri Kebenaran Tindanan</string>
+    <string name="battery_opt_title">Pengoptimuman Bateri</string>
+    <string name="battery_opt_message">Supaya pemantau bateri 20% tidak berhenti automatik, kecualikan aplikasi ini daripada pengoptimuman bateri.</string>
+    <string name="disable_battery_opt_button">Matikan Pengoptimuman Bateri</string>
+    <string name="status_active_title">BatteryLock Aktif (≤20% → 50%)</string>
+    <string name="status_active_message">Bateri semasa: %1$d%%\nSkrin dikunci secara automatik pada ≤ 20% sehingga dicas sekurang-kurangnya 50%.</string>
+    <string name="notif_channel_name">Perkhidmatan BatteryLock (20% - 50%)</string>
+    <string name="notif_title">BatteryLock Aktif</string>
+    <string name="notif_message">Menjaga had bateri minimum 20% (wajib cas hingga 50%).</string>
+</resources>

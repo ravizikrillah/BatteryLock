@@ -54,6 +54,9 @@ To prevent children from unplugging the charger at `21%` just to keep playing, *
 - **Stealth Launcher Footprint**:
   - Uses `CATEGORY_INFO` + `excludeFromRecents="true"` — completely hidden from the Home Screen, App Drawer, and Recent Apps list.
 
+- **Automatic Multi-Language Localization**:
+  - Automatically follows the device's system language (`ACTION_LOCALE_CHANGED` + Android 13+ `localeConfig`) out-of-the-box: **English**, **Bahasa Indonesia**, **Bahasa Melayu**, **Japanese (日本語)**, **Korean (한국어)**, **Simplified Chinese (简体中文)**, **Arabic (العربية — RTL)**, and **Spanish (Español)**.
+
 ---
 
 ## State Machine & Architecture

@@ -1,0 +1,19 @@
+<resources>
+    <string name="low_battery_title">🪫 BATERAI LEMAH</string>
+    <string name="low_battery_message">Baterai tersisa %1$d%%.\nPasang casan &amp; isi minimal sampai %2$d%%.</string>
+    <string name="under_target_title">⚠️ PENGISIAN BELUM %1$d%%</string>
+    <string name="under_target_message">Baterai baru %1$d%%.\nJangan dilepas dulu, cas minimal sampai %2$d%%.</string>
+    <string name="charging_handoff_title">⚡ SEDANG MENGISI DAYA</string>
+    <string name="charging_handoff_message">Perangkat sedang dicas.\nLepas casan untuk menggunakan perangkat.</string>
+    <string name="setup_title">Konfigurasi BatteryLock</string>
+    <string name="permission_request">Aplikasi membutuhkan izin "Muncul di atas aplikasi lain" untuk mengunci layar saat baterai di bawah 20%.</string>
+    <string name="grant_overlay_button">Berikan Izin Overlay</string>
+    <string name="battery_opt_title">Optimasi Baterai</string>
+    <string name="battery_opt_message">Agar pemantau baterai 20% tidak mati otomatis, kecualikan aplikasi dari optimasi baterai.</string>
+    <string name="disable_battery_opt_button">Matikan Optimasi Baterai</string>
+    <string name="status_active_title">BatteryLock Aktif (≤20% → 50%)</string>
+    <string name="status_active_message">Baterai saat ini: %1$d%%\nLayar otomatis terkunci saat baterai ≤ 20% dan baru terbuka kembali setelah dicas minimal 50%.</string>
+    <string name="notif_channel_name">Layanan BatteryLock (20% - 50%)</string>
+    <string name="notif_title">BatteryLock Aktif</string>
+    <string name="notif_message">Menjaga baterai tidak dipakai di bawah 20% (wajib cas s.d. 50%).</string>
+</resources>

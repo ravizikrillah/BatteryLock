@@ -1,8 +1,20 @@
 <resources>
-    <string name="app_name">BatteryLock</string>
-    <string name="low_battery_title">🪫 BATERAI LEMAH</string>
-    <string name="under_target_title">⚠️ PENGISIAN BELUM 50%</string>
-    <string name="charging_handoff_title">⚡ SEDANG MENGISI DAYA</string>
-    <string name="charging_handoff_message">Perangkat sedang dicas.\nLepas casan untuk menggunakan perangkat.</string>
-    <string name="permission_request">Aplikasi membutuhkan izin "Muncul di atas aplikasi lain" untuk mengunci layar saat baterai di bawah 20%.</string>
+    <string name="app_name" translatable="false">BatteryLock</string>
+    <string name="low_battery_title">🪫 LOW BATTERY</string>
+    <string name="low_battery_message">Battery remaining: %1$d%%.\nPlug in the charger &amp; charge to at least %2$d%%.</string>
+    <string name="under_target_title">⚠️ BELOW %1$d%% TARGET</string>
+    <string name="under_target_message">Battery is only at %1$d%%.\nKeep charging until it reaches at least %2$d%%.</string>
+    <string name="charging_handoff_title">⚡ CHARGING IN PROGRESS</string>
+    <string name="charging_handoff_message">Device is currently charging.\nUnplug the charger to use this device.</string>
+    <string name="setup_title">BatteryLock Setup</string>
+    <string name="permission_request">BatteryLock needs "Display over other apps" permission to lock the screen when battery drops to 20% or below.</string>
+    <string name="grant_overlay_button">Grant Overlay Permission</string>
+    <string name="battery_opt_title">Battery Optimization</string>
+    <string name="battery_opt_message">To keep the 20% battery guard running reliably in the background, please exclude this app from battery optimization.</string>
+    <string name="disable_battery_opt_button">Disable Battery Optimization</string>
+    <string name="status_active_title">BatteryLock Active (≤20% → 50%)</string>
+    <string name="status_active_message">Current battery: %1$d%%\nAutomatically locks the screen at ≤ 20% until charged to at least 50%.</string>
+    <string name="notif_channel_name">BatteryLock Service (20% - 50%)</string>
+    <string name="notif_title">BatteryLock Active</string>
+    <string name="notif_message">Guarding minimum 20% battery threshold (charges up to 50%).</string>
 </resources>

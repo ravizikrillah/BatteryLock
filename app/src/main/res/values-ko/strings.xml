@@ -1,0 +1,19 @@
+<resources>
+    <string name="low_battery_title">🪫 배터리 부족</string>
+    <string name="low_battery_message">배터리가 %1$d%% 남았습니다.\n충전기를 연결하여 최소 %2$d%%까지 충전해 주세요.</string>
+    <string name="under_target_title">⚠️ %1$d%% 미만 충전됨</string>
+    <string name="under_target_message">현재 배터리가 %1$d%%입니다.\n분리하지 말고 최소 %2$d%%까지 계속 충전해 주세요.</string>
+    <string name="charging_handoff_title">⚡ 충전 중</string>
+    <string name="charging_handoff_message">기기가 충전 중입니다.\n기기를 사용하려면 충전기를 분리해 주세요.</string>
+    <string name="setup_title">BatteryLock 설정</string>
+    <string name="permission_request">배터리가 20% 이하일 때 화면을 잠그려면 "다른 앱 위에 표시" 권한이 필요합니다.</string>
+    <string name="grant_overlay_button">오버레이 권한 허용</string>
+    <string name="battery_opt_title">배터리 최적화</string>
+    <string name="battery_opt_message">백그라운드 감지가 중단되지 않도록 배터리 최적화에서 제외해 주세요.</string>
+    <string name="disable_battery_opt_button">배터리 최적화 해제</string>
+    <string name="status_active_title">BatteryLock 활성화됨 (≤20% → 50%)</string>
+    <string name="status_active_message">현재 배터리: %1$d%%\n20% 이하에서 자동 잠금되며 최소 50% 충전 후 해제됩니다.</string>
+    <string name="notif_channel_name">BatteryLock 서비스 (20% - 50%)</string>
+    <string name="notif_title">BatteryLock 실행 중</string>
+    <string name="notif_message">최소 20% 배터리 보호 중 (50%까지 충전 필요).</string>
+</resources>

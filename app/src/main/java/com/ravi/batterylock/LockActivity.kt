@@ -319,15 +319,23 @@ fun SeamlessBatteryLockScreen(
     val headerText = when {
         isChargingHandoff -> stringResource(id = R.string.charging_handoff_title)
         batteryLevel <= BatteryLockState.LOW_THRESHOLD -> stringResource(id = R.string.low_battery_title)
-        else -> stringResource(id = R.string.under_target_title)
+        else -> stringResource(id = R.string.under_target_title, BatteryLockState.TARGET_THRESHOLD)
     }
 
     val messageText = when {
         isChargingHandoff -> stringResource(id = R.string.charging_handoff_message)
         batteryLevel <= BatteryLockState.LOW_THRESHOLD ->
-            "Baterai tersisa $batteryLevel%.\nPasang casan & isi minimal sampai ${BatteryLockState.TARGET_THRESHOLD}%."
+            stringResource(
+                id = R.string.low_battery_message,
+                batteryLevel,
+                BatteryLockState.TARGET_THRESHOLD
+            )
         else ->
-            "Baterai baru $batteryLevel%.\nJangan dilepas dulu, cas minimal sampai ${BatteryLockState.TARGET_THRESHOLD}%."
+            stringResource(
+                id = R.string.under_target_message,
+                batteryLevel,
+                BatteryLockState.TARGET_THRESHOLD
+            )
     }
 
     // Exact same geometry, sizes (220.dp, 60.dp, 54.sp, 48.dp spacer, 20.dp card padding)

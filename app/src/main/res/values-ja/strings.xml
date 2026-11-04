@@ -1,0 +1,19 @@
+<resources>
+    <string name="low_battery_title">🪫 バッテリー残量低下</string>
+    <string name="low_battery_message">バッテリー残量は %1$d%% です。\n充電器を接続し、%2$d%% 以上まで充電してください。</string>
+    <string name="under_target_title">⚠️ %1$d%% 未満です</string>
+    <string name="under_target_message">現在 %1$d%% です。\n外さずに %2$d%% 以上になるまで充電を続けてください。</string>
+    <string name="charging_handoff_title">⚡ 充電中</string>
+    <string name="charging_handoff_message">現在充電中です。\n端末を使用するには充電器を外してください。</string>
+    <string name="setup_title">BatteryLock 初期設定</string>
+    <string name="permission_request">バッテリーが20%以下の時に画面をロックするには「他のアプリの上に重ねて表示」権限が必要です。</string>
+    <string name="grant_overlay_button">オーバーレイ権限を許可</string>
+    <string name="battery_opt_title">バッテリー最適化</string>
+    <string name="battery_opt_message">バックグラウンド監視を維持するため、バッテリー最適化の対象外に設定してください。</string>
+    <string name="disable_battery_opt_button">バッテリー最適化を無効化</string>
+    <string name="status_active_title">BatteryLock 有効 (≤20% → 50%)</string>
+    <string name="status_active_message">現在の残量: %1$d%%\n20%以下で自動ロックされ、50%以上まで充電すると解除されます。</string>
+    <string name="notif_channel_name">BatteryLock サービス (20% - 50%)</string>
+    <string name="notif_title">BatteryLock 有効</string>
+    <string name="notif_message">最低バッテリー残量20%を保護中（50%まで充電必須）。</string>
+</resources>

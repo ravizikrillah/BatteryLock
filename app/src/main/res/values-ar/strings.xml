@@ -1,0 +1,19 @@
+<resources>
+    <string name="low_battery_title">🪫 البطارية منخفضة</string>
+    <string name="low_battery_message">البطارية المتبقية %1$d%%.\nيرجى توصيل الشاحن والشحن حتى %2$d%% على الأقل.</string>
+    <string name="under_target_title">⚠️ لم يصل الشحن إلى %1$d%%</string>
+    <string name="under_target_message">البطارية حالياً %1$d%% فقط.\nلا تفصل الشاحن قبل الوصول إلى %2$d%% على الأقل.</string>
+    <string name="charging_handoff_title">⚡ جاري الشحن</string>
+    <string name="charging_handoff_message">الجهاز قيد الشحن حالياً.\nافصل الشاحن لاستخدام الجهاز.</string>
+    <string name="setup_title">إعداد BatteryLock</string>
+    <string name="permission_request">يحتاج التطبيق إلى إذن "الظهور فوق التطبيقات الأخرى" لقفل الشاشة عند انخفاض البطارية إلى 20% أو أقل.</string>
+    <string name="grant_overlay_button">منح إذن الظهور</string>
+    <string name="battery_opt_title">تحسين البطارية</string>
+    <string name="battery_opt_message">لضمان استمرار مراقبة البطارية في الخلفية، يرجى استثناء التطبيق من تحسين البطارية.</string>
+    <string name="disable_battery_opt_button">إيقاف تحسين البطارية</string>
+    <string name="status_active_title">BatteryLock نشط (≤20% ← 50%)</string>
+    <string name="status_active_message">البطارية الحالية: %1$d%%\nيتم قفل الشاشة تلقائياً عند ≤ 20% حتى تُشحن إلى 50% على الأقل.</string>
+    <string name="notif_channel_name">خدمة BatteryLock (20% - 50%)</string>
+    <string name="notif_title">BatteryLock نشط</string>
+    <string name="notif_message">مراقبة الحد الأدنى للبطارية 20% (الشحن مطلوب حتى 50%).</string>
+</resources>

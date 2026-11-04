@@ -42,10 +42,13 @@ class BatteryMonitorService : Service() {
                     sendBroadcast(Intent(BatteryLockState.ACTION_HANDOFF_TO_CHARGELOCK).setPackage(packageName))
                 }
                 Intent.ACTION_POWER_DISCONNECTED -> {
-                    // Check immediately and again shortly after ChargeLockV2 finishes to Home
+                    // Check immediately and again shortly after ChargeLock finishes to Home
                     handleBatteryCheck(forceDisconnected = true)
                     mainHandler.postDelayed({ handleBatteryCheck() }, 200L)
                     mainHandler.postDelayed({ handleBatteryCheck() }, 550L)
+                }
+                Intent.ACTION_LOCALE_CHANGED -> {
+                    startAsForeground()
                 }
             }
         }
@@ -59,6 +62,7 @@ class BatteryMonitorService : Service() {
             addAction(Intent.ACTION_BATTERY_CHANGED)
             addAction(Intent.ACTION_POWER_CONNECTED)
             addAction(Intent.ACTION_POWER_DISCONNECTED)
+            addAction(Intent.ACTION_LOCALE_CHANGED)
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -118,7 +122,7 @@ class BatteryMonitorService : Service() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 channelId,
-                "BatteryLock Service (20% - 50%)",
+                getString(R.string.notif_channel_name),
                 NotificationManager.IMPORTANCE_LOW
             )
             val manager = getSystemService(NotificationManager::class.java)
@@ -126,8 +130,8 @@ class BatteryMonitorService : Service() {
         }
 
         val notification = NotificationCompat.Builder(this, channelId)
-            .setContentTitle("BatteryLock Aktif")
-            .setContentText("Menjaga baterai tidak dipakai di bawah 20% (wajib cas s.d. 50%).")
+            .setContentTitle(getString(R.string.notif_title))
+            .setContentText(getString(R.string.notif_message))
             .setSmallIcon(R.mipmap.ic_launcher)
             .setOngoing(true)
             .build()

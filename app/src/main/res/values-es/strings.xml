@@ -1,0 +1,19 @@
+<resources>
+    <string name="low_battery_title">🪫 BATERÍA BAJA</string>
+    <string name="low_battery_message">Batería restante: %1$d%%.\nConecta el cargador y carga al menos hasta el %2$d%%.</string>
+    <string name="under_target_title">⚠️ CARGA MENOR AL %1$d%%</string>
+    <string name="under_target_message">La batería está en %1$d%%.\nNo desconectes aún, carga al menos hasta el %2$d%%.</string>
+    <string name="charging_handoff_title">⚡ CARGANDO DISPOSITIVO</string>
+    <string name="charging_handoff_message">El dispositivo se está cargando.\nDesconecta el cargador para usarlo.</string>
+    <string name="setup_title">Configuración de BatteryLock</string>
+    <string name="permission_request">Se necesita el permiso "Mostrar sobre otras apps" para bloquear la pantalla cuando la batería baje al 20%.</string>
+    <string name="grant_overlay_button">Conceder Permiso</string>
+    <string name="battery_opt_title">Optimización de Batería</string>
+    <string name="battery_opt_message">Para mantener activo el protector de batería en segundo plano, excluye la app de la optimización de batería.</string>
+    <string name="disable_battery_opt_button">Desactivar Optimización</string>
+    <string name="status_active_title">BatteryLock Activo (≤20% → 50%)</string>
+    <string name="status_active_message">Batería actual: %1$d%%\nSe bloquea automáticamente al ≤ 20% hasta cargarse al menos al 50%.</string>
+    <string name="notif_channel_name">Servicio BatteryLock (20% - 50%)</string>
+    <string name="notif_title">BatteryLock Activo</string>
+    <string name="notif_message">Protegiendo nivel mínimo de 20% (carga requerida hasta 50%).</string>
+</resources>
