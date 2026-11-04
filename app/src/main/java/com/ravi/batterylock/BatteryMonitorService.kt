@@ -18,6 +18,18 @@ class BatteryMonitorService : Service() {
 
     private val mainHandler = Handler(Looper.getMainLooper())
 
+    private var lastChargingSeen = false
+
+    private fun wakeChargeLock() {
+        runCatching {
+            val wakeIntent = Intent("com.ravi.chargelock.WAKE_CHECK").apply {
+                setPackage("com.ravi.chargelock")
+                addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
+            }
+            sendBroadcast(wakeIntent)
+        }
+    }
+
     private val batteryReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
@@ -25,7 +37,8 @@ class BatteryMonitorService : Service() {
                     handleBatteryCheck(batteryIntent = intent)
                 }
                 Intent.ACTION_POWER_CONNECTED -> {
-                    // Notify LockActivity immediately for seamless green morph & handoff to ChargeLockV2
+                    wakeChargeLock()
+                    // Notify LockActivity immediately for seamless green morph & handoff to ChargeLock
                     sendBroadcast(Intent(BatteryLockState.ACTION_HANDOFF_TO_CHARGELOCK).setPackage(packageName))
                 }
                 Intent.ACTION_POWER_DISCONNECTED -> {
@@ -75,6 +88,11 @@ class BatteryMonitorService : Service() {
             batteryIntent = batteryIntent,
             forceDisconnectedOverride = forceDisconnected
         )
+
+        if (snapshot.isCharging && !lastChargingSeen) {
+            wakeChargeLock()
+        }
+        lastChargingSeen = snapshot.isCharging
 
         if (snapshot.shouldLockScreen) {
             launchLockActivity()
