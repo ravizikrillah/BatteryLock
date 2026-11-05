@@ -50,6 +50,9 @@ class BatteryMonitorService : Service() {
                 Intent.ACTION_LOCALE_CHANGED -> {
                     startAsForeground()
                 }
+                Intent.ACTION_SCREEN_ON -> {
+                    handleBatteryCheck()
+                }
             }
         }
     }
@@ -63,6 +66,7 @@ class BatteryMonitorService : Service() {
             addAction(Intent.ACTION_POWER_CONNECTED)
             addAction(Intent.ACTION_POWER_DISCONNECTED)
             addAction(Intent.ACTION_LOCALE_CHANGED)
+            addAction(Intent.ACTION_SCREEN_ON)
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {

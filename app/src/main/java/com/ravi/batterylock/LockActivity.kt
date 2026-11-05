@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.PowerManager
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
@@ -171,7 +172,6 @@ class LockActivity : ComponentActivity() {
             return
         }
 
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         setShowWhenLocked(true)
         setTurnScreenOn(true)
 
@@ -213,12 +213,20 @@ class LockActivity : ComponentActivity() {
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     }
 
+    private fun isScreenInteractive(): Boolean {
+        val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
+        return pm.isInteractive
+    }
+
     private fun shouldEnforceLockRightNow(): Boolean {
         if (isChargingHandoff.value || isFinishing) return false
+        // JANGAN enforce jika layar sedang mati / sleep (tombol power ditekan atau screen timeout)
+        if (!isScreenInteractive()) return false
         return BatteryLockState.evaluateAndUpdate(this).shouldLockScreen
     }
 
     private fun bringBackToFront() {
+        if (!isScreenInteractive()) return
         val intent = Intent(this, LockActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
             addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
@@ -234,8 +242,6 @@ class LockActivity : ComponentActivity() {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) {
             hideSystemUI()
-        } else if (shouldEnforceLockRightNow()) {
-            bringBackToFront()
         }
     }
 
@@ -249,15 +255,7 @@ class LockActivity : ComponentActivity() {
     @Suppress("DEPRECATION")
     override fun onPause() {
         super.onPause()
-        if (shouldEnforceLockRightNow()) {
-            window.decorView.postDelayed({
-                if (shouldEnforceLockRightNow()) {
-                    val am = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-                    am.moveTaskToFront(taskId, 0)
-                    bringBackToFront()
-                }
-            }, 90L)
-        }
+        // Biarkan proses sleep berjalan lancar tanpa dipaksa ke depan lagi
     }
 
     override fun onDestroy() {
